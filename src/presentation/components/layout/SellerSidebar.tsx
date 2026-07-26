@@ -48,8 +48,10 @@ export function SellerSidebar() {
   return (
     <aside className="fixed left-0 top-0 z-50 flex h-screen w-sidebar-width flex-col bg-ocean shadow-md">
       <div className="px-xl py-huge">
-        <h1 className="text-h3 font-black text-primary">Ambrosia</h1>
-        <p className="mt-xs text-label-medium uppercase tracking-widest text-primary/80">Seller Portal</p>
+        <div className="inline-flex rounded-lg bg-white p-sm shadow-sm">
+          <img src="/ambrosia-logo.svg" alt="Ambrosia" className="h-8 w-auto" />
+        </div>
+        <p className="mt-sm text-label-medium uppercase tracking-widest text-primary/80">Seller Portal</p>
       </div>
       <nav className="flex-grow">
         {SELLER_NAV_ITEMS.map((item) => (
