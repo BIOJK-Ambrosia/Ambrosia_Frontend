@@ -17,7 +17,8 @@ describe('BuyerLayout', () => {
 
     render(<RouterProvider router={router} />);
 
-    expect(screen.getByText('Ambrosia Procurement')).toBeInTheDocument();
+    expect(screen.getByAltText('Ambrosia')).toBeInTheDocument();
+    expect(screen.getByText('Buyer Workspace')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('Cari PR, Vendor, atau Alert...')).toBeInTheDocument();
     expect(screen.getByText('Page Content')).toBeInTheDocument();
   });

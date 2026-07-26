@@ -57,8 +57,10 @@ export function BuyerSidebar() {
   return (
     <aside className="fixed left-0 top-0 z-50 flex h-screen w-sidebar-width flex-col border-r border-outline-variant/20 bg-primary text-on-primary shadow-md">
       <div className="p-xl">
-        <h1 className="text-h3 font-bold text-on-primary">Ambrosia Procurement</h1>
-        <p className="mt-xs text-caption text-on-primary/60">Buyer Workspace</p>
+        <div className="inline-flex rounded-lg bg-white p-sm shadow-sm">
+          <img src="/ambrosia-logo.svg" alt="Ambrosia" className="h-8 w-auto" />
+        </div>
+        <p className="mt-sm text-caption text-on-primary/60">Buyer Workspace</p>
       </div>
       <nav className="flex-1 space-y-1 overflow-y-auto px-sm">
         {BUYER_NAV_ITEMS.map((item) => (
