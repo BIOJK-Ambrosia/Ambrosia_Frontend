@@ -123,7 +123,7 @@ export function VendorPortalPage() {
             </label>
             <input
               id="price-per-kg"
-              className="w-full rounded-lg border-outline-variant p-md focus:border-primary focus:ring-primary"
+              className="w-full rounded-lg border border-outline-variant p-md text-on-surface focus:border-primary focus:ring-primary"
               placeholder="Contoh: 45000"
               type="number"
               value={price}
@@ -137,7 +137,7 @@ export function VendorPortalPage() {
             </label>
             <input
               id="lead-time"
-              className="w-full rounded-lg border-outline-variant p-md focus:border-primary focus:ring-primary"
+              className="w-full rounded-lg border border-outline-variant p-md text-on-surface focus:border-primary focus:ring-primary"
               placeholder="Contoh: 7"
               type="number"
               value={leadTime}
@@ -151,7 +151,7 @@ export function VendorPortalPage() {
             </label>
             <select
               id="payment-terms"
-              className="w-full rounded-lg border-outline-variant p-md focus:border-primary focus:ring-primary"
+              className="w-full rounded-lg border border-outline-variant p-md text-on-surface focus:border-primary focus:ring-primary"
               value={paymentTerms}
               onChange={(event) => setPaymentTerms(event.target.value)}
             >

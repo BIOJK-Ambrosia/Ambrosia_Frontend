@@ -90,21 +90,21 @@ export function RfqManagementPage() {
           onSubmit={handleCreateSubmit}
         >
           <input
-            className="rounded-lg border border-outline-variant px-3 py-2 text-body"
+            className="rounded-lg border border-outline-variant px-3 py-2 text-body text-on-surface"
             placeholder="Judul RFQ"
             value={newTitle}
             onChange={(event) => setNewTitle(event.target.value)}
             required
           />
           <input
-            className="rounded-lg border border-outline-variant px-3 py-2 text-body"
+            className="rounded-lg border border-outline-variant px-3 py-2 text-body text-on-surface"
             placeholder="Kategori"
             value={newCategory}
             onChange={(event) => setNewCategory(event.target.value)}
             required
           />
           <input
-            className="rounded-lg border border-outline-variant px-3 py-2 text-body"
+            className="rounded-lg border border-outline-variant px-3 py-2 text-body text-on-surface"
             placeholder="Nama Vendor"
             value={newVendorName}
             onChange={(event) => setNewVendorName(event.target.value)}
@@ -260,7 +260,7 @@ function FilterSelect({
       </label>
       <select
         id={id}
-        className="min-w-[160px] rounded-lg border-outline-variant px-4 py-2 text-body focus:ring-primary"
+        className="min-w-[160px] rounded-lg border border-outline-variant px-4 py-2 text-body text-on-surface focus:ring-primary"
         value={value}
         onChange={(event) => onChange?.(event.target.value)}
       >

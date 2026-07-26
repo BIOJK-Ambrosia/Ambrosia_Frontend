@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
+import { FormField } from '@/presentation/components/common/FormField';
 
 const STEPS = ['Data Legal', 'Dokumen', 'Kontak PIC', 'Kategori'];
 const COMMODITY_CATEGORIES = ['Raw Materials', 'Chemicals', 'Packaging', 'Logistics Services'];
@@ -48,7 +49,7 @@ export function VendorRegistrationPage() {
                 <strong>1-2 hari kerja</strong>.
               </p>
             </div>
-            <p className="mx-auto mb-huge max-w-md text-on-surface-variant">
+            <p className="mx-auto mb-huge max-w-[28rem] text-on-surface-variant">
               Terima kasih telah melengkapi data perusahaan Anda. Kami akan mengirimkan notifikasi melalui Email dan
               WhatsApp setelah akun Anda aktif.
             </p>
@@ -107,7 +108,7 @@ export function VendorRegistrationPage() {
           <div className="relative col-span-12 flex items-center justify-between overflow-hidden rounded-xl border border-surface-variant bg-white p-huge shadow-sm">
             <div className="relative z-10">
               <h2 className="text-display text-primary">Registrasi Vendor Baru</h2>
-              <p className="mt-xs max-w-md text-on-surface-variant">
+              <p className="mt-xs max-w-[28rem] text-on-surface-variant">
                 Lengkapi data legalitas dan operasional perusahaan Anda untuk mulai berpartisipasi dalam RFQ.
               </p>
             </div>
@@ -198,32 +199,5 @@ export function VendorRegistrationPage() {
         </form>
       </div>
     </main>
-  );
-}
-
-function FormField({
-  label,
-  placeholder,
-  name,
-  error,
-}: {
-  label: string;
-  placeholder: string;
-  name: string;
-  error?: string;
-}) {
-  return (
-    <div className="flex flex-col gap-xs">
-      <label className="text-label-medium text-on-surface-variant">{label}</label>
-      <input
-        name={name}
-        className={`w-full rounded-lg p-2 ${
-          error ? 'border-danger focus:border-danger focus:ring-danger' : 'border-outline-variant focus:border-secondary focus:ring-secondary'
-        }`}
-        placeholder={placeholder}
-        type="text"
-      />
-      {error && <p className="text-caption text-danger">{error}</p>}
-    </div>
   );
 }

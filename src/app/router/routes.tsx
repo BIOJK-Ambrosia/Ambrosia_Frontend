@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import { BuyerLayout } from '@/presentation/components/layout/BuyerLayout';
 import { SellerLayout } from '@/presentation/components/layout/SellerLayout';
 import { BuyerDashboardPage } from '@/presentation/pages/dashboard/BuyerDashboardPage';
@@ -8,11 +8,18 @@ import { RfqManagementPage } from '@/presentation/pages/rfq/RfqManagementPage';
 import { VendorRegistrationPage } from '@/presentation/pages/vendor-registration/VendorRegistrationPage';
 import { VendorPortalPage } from '@/presentation/pages/vendor-portal/VendorPortalPage';
 import { SellerDashboardPage } from '@/presentation/pages/vendor-portal/SellerDashboardPage';
+import { LoginPage } from '@/presentation/pages/login/LoginPage';
+import { BuyerRegisterPage } from '@/presentation/pages/buyer-registration/BuyerRegisterPage';
+import { LandingPage } from '@/presentation/pages/landing/LandingPage';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Navigate to="/dashboard" replace />,
+    element: <LandingPage />,
+  },
+  {
+    path: '/login',
+    element: <LoginPage />,
   },
   {
     element: <BuyerLayout />,
@@ -21,6 +28,7 @@ export const router = createBrowserRouter([
       { path: '/forecasting', element: <DemandForecastingPage /> },
       { path: '/document-parsing', element: <DocumentParsingPage /> },
       { path: '/rfq', element: <RfqManagementPage /> },
+      { path: '/buyer/registrasi', element: <BuyerRegisterPage /> },
     ],
   },
   {
