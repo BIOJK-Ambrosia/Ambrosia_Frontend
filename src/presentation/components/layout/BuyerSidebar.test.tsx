@@ -27,6 +27,6 @@ describe('BuyerSidebar', () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByText('Dashboard').closest('a')).toHaveClass('bg-secondary');
+    expect(screen.getByText('Dashboard').closest('a')).toHaveClass('border-secondary');
   });
 });

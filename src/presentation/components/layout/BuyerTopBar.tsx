@@ -15,7 +15,7 @@ export function BuyerTopBar() {
       <div className="relative w-96">
         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
         <input
-          className="w-full rounded-full border-none bg-surface-container py-2 pl-10 pr-4 transition-all focus:ring-2 focus:ring-primary"
+          className="w-full rounded-full border-none bg-surface-container py-2 pl-10 pr-4 text-on-surface outline-none transition-all focus:ring-2 focus:ring-primary/30"
           placeholder="Cari PR, Vendor, atau Alert..."
           type="text"
         />

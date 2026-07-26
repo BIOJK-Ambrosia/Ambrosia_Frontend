@@ -49,6 +49,18 @@ primary). Warna semantik (hijau/oranye/merah untuk status) tetap terpisah dari p
 jangan dicampur, sesuai Prinsip Desain §3 di atas.
 - **Layout**: breakpoint desktop-first (dirancang untuk lebar layar ≥1280px), grid berbasis
   kartu (card) dengan spacing konsisten, shadow lembut untuk elevasi kartu.
+- **Elevasi kartu**: kartu **tidak** memakai border + shadow generik. Elevasi cukup lewat
+  `shadow-md shadow-primary/[0.06]` (shadow ditint warna primary, bukan hitam polos) tanpa
+  border — border hanya dipakai untuk garis pemisah/aksen semantik (mis. `MethodologyNotice`,
+  form input), bukan untuk kartu statistik/panel.
+- **Angka pada UI data-dense** (KPI, harga, skor) pakai `tabular-nums` supaya sejajar rapi di
+  tabel/kartu berjejer — lihat `SummaryCard`, `ConfidenceBadge`.
+- **Nav aktif di sidebar**: indikator berupa left-accent border (`border-l-2 border-secondary`
+  di Buyer, `border-l-2 border-primary` di Seller) + tint background lembut — bukan solid fill
+  penuh, supaya terasa seperti tab terpilih bukan tombol ditekan.
+- **Display type** (`text-display`, `text-h2`, `text-h3`, `text-metric-lg`, `text-metric-sm`)
+  pakai sedikit negative letter-spacing (`-0.01em` s/d `-0.02em`) supaya headline/angka besar
+  terasa lebih rapat dan "dirancang", bukan lebar default browser.
 
 ## Struktur Navigasi
 

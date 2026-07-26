@@ -16,10 +16,10 @@ export function ConfidenceBadge({ level, percentage }: ConfidenceBadgeProps) {
 
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-black uppercase ${style.className}`}
+      className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-black uppercase tracking-wide ${style.className}`}
     >
       <span className="material-symbols-outlined text-[12px]">{style.icon}</span>
-      {style.label} {percentage}%
+      {style.label} <span className="tabular-nums">{percentage}%</span>
     </span>
   );
 }

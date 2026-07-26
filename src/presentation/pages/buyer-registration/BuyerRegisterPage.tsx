@@ -90,7 +90,7 @@ export function BuyerRegisterPage() {
           <select
             id="role"
             name="role"
-            className="w-full rounded-lg border border-outline-variant p-2 text-on-surface focus:border-secondary focus:ring-secondary"
+            className="w-full rounded-lg border border-outline-variant p-2 text-on-surface outline-none transition-colors duration-200 hover:border-outline focus:border-secondary focus:ring-2 focus:ring-secondary/30"
           >
             {BUYER_ROLES.map((role) => (
               <option key={role.value} value={role.value}>
