@@ -94,6 +94,28 @@ Follow the `product` pattern:
 Write a unit test alongside each domain/application/infrastructure file, and
 a component test alongside each presentation component.
 
+## Presentation-only features (no backend yet)
+
+Some UI (e.g. the Buyer/Seller Ambrosia pages under `presentation/pages/`) is built ahead of
+its backend endpoint per `docs/ambrosia.md`'s implementation status. For these, skip
+`domain`/`application`/`infrastructure` entirely — no fake repositories or use-cases — and
+keep the page presentation-only with local mock data (co-located `mockData.ts`). Once the
+real endpoint exists, follow the normal "Adding a new module" flow to wire it up properly.
+
+- `presentation/components/common/` — small reusable UI pieces shared across pages/modules
+  (badges, cards, notices) that aren't tied to one module.
+- `presentation/components/layout/` — page-shell components (sidebar, top bar, and a
+  `*Layout` component wrapping both around a React Router `<Outlet />`). Route groups that
+  share a shell are nested under the layout element in `app/router/routes.tsx` instead of
+  each page repeating the shell markup.
+- `shared/types/` — plain cross-cutting TypeScript types with no business logic (e.g. a
+  small union type reused by several presentation components). Not a substitute for a
+  `domain` entity once a module has a real backend behind it.
+- `presentation/stores/` — Zustand stores for state that's genuinely shared **across pages**
+  within a presentation-only feature (e.g. a toast notification queue, or session-scoped data
+  two sibling pages both read/write). Per-page state stays local `useState` in the page
+  component — only reach for a store here when two or more pages must agree on the same data.
+
 ## Path aliases
 
 `@/*` maps to `src/*` (configured in `vite.config.ts` and

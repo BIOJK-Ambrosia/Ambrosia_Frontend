@@ -1,9 +1,108 @@
 @import "tailwindcss";
 
+@theme {
+  /* Brand palette — docs/design.md §2.1 */
+  --color-primary: #0b2447;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #243a5e;
+  --color-on-primary-container: #8fa4ce;
+  --color-midnight: #243a5e;
+  --color-denim: #5f86a6;
+  --color-secondary: #3b6281;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #b4dcff;
+  --color-on-secondary-container: #39617f;
+  --color-tertiary: #00273d;
+  --color-on-tertiary: #ffffff;
+  --color-ocean: #8fb6d8;
+  --color-powder: #cfe3f1;
+  --color-cloud: #edf4fa;
+
+  /* Surfaces / neutrals */
+  --color-background: #f5faff;
+  --color-on-background: #151d21;
+  --color-surface: #f5faff;
+  --color-on-surface: #151d21;
+  --color-on-surface-variant: #44474e;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #edf4fa;
+  --color-surface-container: #e8eff5;
+  --color-surface-container-high: #e2e9ef;
+  --color-surface-container-highest: #dce3e9;
+  --color-surface-variant: #dce3e9;
+  --color-surface-dim: #d4dbe1;
+  --color-surface-bright: #f5faff;
+  --color-outline: #74777f;
+  --color-outline-variant: #c4c6cf;
+
+  /* Semantic (status only — docs/design.md §2.2) */
+  --color-success: #2e7d32;
+  --color-warning: #ed6c02;
+  --color-danger: #c62828;
+
+  /* Spacing scale — docs/design.md §4 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+  --spacing-huge: 48px;
+  --spacing-sidebar-width: 240px;
+  --spacing-gutter: 24px;
+
+  /* Radius — docs/design.md §4 (8px small elements, 12px cards) */
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  /* Typography scale — docs/design.md §3 */
+  --text-display: 32px;
+  --text-display--line-height: 40px;
+  --text-display--font-weight: 700;
+
+  --text-h2: 22px;
+  --text-h2--line-height: 28px;
+  --text-h2--font-weight: 600;
+
+  --text-h3: 18px;
+  --text-h3--line-height: 24px;
+  --text-h3--font-weight: 600;
+
+  --text-body: 14px;
+  --text-body--line-height: 20px;
+  --text-body--font-weight: 400;
+
+  --text-caption: 12px;
+  --text-caption--line-height: 16px;
+  --text-caption--font-weight: 400;
+
+  --text-label-medium: 12px;
+  --text-label-medium--line-height: 16px;
+  --text-label-medium--font-weight: 500;
+
+  --text-metric-lg: 36px;
+  --text-metric-lg--line-height: 44px;
+  --text-metric-lg--font-weight: 700;
+
+  --text-metric-sm: 24px;
+  --text-metric-sm--line-height: 32px;
+  --text-metric-sm--font-weight: 700;
+}
+
 :root {
   color-scheme: light dark;
 }
 
 body {
   margin: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
 }

@@ -17,6 +17,9 @@ dist-ssr
 .env.*
 !.env.example
 
+# Internal planning docs (specs/plans) - not published to remote
+docs/superpowers/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -27,3 +30,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.md
+.claude
+.agents
+docs
