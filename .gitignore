@@ -30,3 +30,7 @@ docs/superpowers/
 *.njsproj
 *.sln
 *.sw?
+.md
+.claude
+.agents
+docs
