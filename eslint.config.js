@@ -51,11 +51,11 @@ export default tseslint.config(
           policies: [
             {
               from: { element: { type: 'domain' } },
-              allow: { to: { element: { type: 'shared' } } },
+              allow: { to: { element: { types: { anyOf: ['domain', 'shared'] } } } },
             },
             {
               from: { element: { type: 'application' } },
-              allow: { to: { element: { types: { anyOf: ['domain', 'shared'] } } } },
+              allow: { to: { element: { types: { anyOf: ['application', 'domain', 'shared'] } } } },
             },
             {
               from: { element: { type: 'infrastructure' } },
@@ -69,7 +69,11 @@ export default tseslint.config(
             },
             {
               from: { element: { type: 'presentation' } },
-              allow: { to: { element: { types: { anyOf: ['application', 'shared', 'app'] } } } },
+              allow: {
+                to: {
+                  element: { types: { anyOf: ['presentation', 'application', 'shared', 'app'] } },
+                },
+              },
             },
             {
               from: { element: { type: 'app' } },
