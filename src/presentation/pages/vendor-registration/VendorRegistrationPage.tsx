@@ -37,7 +37,7 @@ export function VendorRegistrationPage() {
   if (submitted) {
     return (
       <main className="flex min-h-[calc(100vh-4rem)] flex-col items-center p-huge">
-        <div className="relative w-full max-w-2xl overflow-hidden rounded-xl border border-surface-variant bg-white p-huge text-center shadow-2xl">
+        <div className="relative w-full max-w-2xl overflow-hidden rounded-xl bg-white p-huge text-center shadow-2xl shadow-primary/10">
           <div className="relative z-10">
             <div className="mx-auto mb-xl flex h-24 w-24 items-center justify-center rounded-full border-4 border-white bg-surface-container-low shadow-inner">
               <span className="material-symbols-outlined text-[48px] text-secondary">schedule</span>
@@ -105,7 +105,7 @@ export function VendorRegistrationPage() {
         </div>
 
         <form className="grid grid-cols-12 gap-xl" onSubmit={handleSubmit}>
-          <div className="relative col-span-12 flex items-center justify-between overflow-hidden rounded-xl border border-surface-variant bg-white p-huge shadow-sm">
+          <div className="relative col-span-12 flex items-center justify-between overflow-hidden rounded-xl bg-white p-huge shadow-md shadow-primary/[0.06]">
             <div className="relative z-10">
               <h2 className="text-display text-primary">Registrasi Vendor Baru</h2>
               <p className="mt-xs max-w-[28rem] text-on-surface-variant">
@@ -117,7 +117,7 @@ export function VendorRegistrationPage() {
             </div>
           </div>
 
-          <div className="col-span-12 rounded-xl border border-surface-variant bg-white p-xl shadow-sm md:col-span-7">
+          <div className="col-span-12 rounded-xl bg-white p-xl shadow-md shadow-primary/[0.06] md:col-span-7">
             <h3 className="mb-lg flex items-center gap-sm text-h3 text-primary">
               <span className="material-symbols-outlined">gavel</span>
               Informasi Legalitas
@@ -136,7 +136,7 @@ export function VendorRegistrationPage() {
             </div>
           </div>
 
-          <div className="col-span-12 flex flex-col rounded-xl border border-surface-variant bg-surface-container p-xl shadow-sm md:col-span-5">
+          <div className="col-span-12 flex flex-col rounded-xl bg-surface-container p-xl shadow-md shadow-primary/[0.06] md:col-span-5">
             <h3 className="mb-lg flex items-center gap-sm text-h3 text-primary">
               <span className="material-symbols-outlined">upload_file</span>
               Upload Legalitas
@@ -150,7 +150,7 @@ export function VendorRegistrationPage() {
             </div>
           </div>
 
-          <div className="col-span-12 rounded-xl border border-surface-variant bg-white p-xl shadow-sm md:col-span-6">
+          <div className="col-span-12 rounded-xl bg-white p-xl shadow-md shadow-primary/[0.06] md:col-span-6">
             <h3 className="mb-lg flex items-center gap-sm text-h3 text-primary">
               <span className="material-symbols-outlined">contact_phone</span>
               Kontak PIC (Person In Charge)
@@ -161,7 +161,7 @@ export function VendorRegistrationPage() {
             </div>
           </div>
 
-          <div className="col-span-12 rounded-xl border border-surface-variant bg-white p-xl shadow-sm md:col-span-6">
+          <div className="col-span-12 rounded-xl bg-white p-xl shadow-md shadow-primary/[0.06] md:col-span-6">
             <h3 className="mb-lg flex items-center gap-sm text-h3 text-primary">
               <span className="material-symbols-outlined">category</span>
               Kategori Komoditas
@@ -178,7 +178,7 @@ export function VendorRegistrationPage() {
                     name="category"
                     value={category}
                   />
-                  <span className="text-label-medium">{category}</span>
+                  <span className="text-label-medium text-on-surface">{category}</span>
                 </label>
               ))}
             </div>

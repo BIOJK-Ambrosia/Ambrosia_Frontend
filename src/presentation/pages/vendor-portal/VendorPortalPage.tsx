@@ -53,7 +53,7 @@ export function VendorPortalPage() {
           {notifications.map((notification) => (
             <div
               key={notification.id}
-              className="flex flex-col justify-between gap-xl rounded-xl border border-surface-variant/50 bg-white p-xl shadow-sm transition-all hover:border-primary/20 md:flex-row md:items-center"
+              className="flex flex-col justify-between gap-xl rounded-xl bg-white p-xl shadow-md shadow-primary/[0.06] transition-shadow md:flex-row md:items-center"
             >
               <div className="flex gap-lg">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-surface-container-high text-primary">
@@ -102,7 +102,7 @@ export function VendorPortalPage() {
         </div>
 
         <form
-          className="mt-huge grid grid-cols-1 gap-xl rounded-xl border border-surface-variant bg-white p-huge shadow-sm md:grid-cols-2"
+          className="mt-huge grid grid-cols-1 gap-xl rounded-xl bg-white p-huge shadow-md shadow-primary/[0.06] md:grid-cols-2"
           onSubmit={handleSubmitBid}
         >
           <div className="col-span-full flex items-center gap-md border-b border-surface-variant pb-xl">

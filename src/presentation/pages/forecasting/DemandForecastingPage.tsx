@@ -52,25 +52,25 @@ export function DemandForecastingPage() {
           <LegendItem colorClassName="bg-ocean" label="P50 (Median Forecast)" rounded="rounded-full" />
           <div className="flex items-center gap-sm rounded-lg border border-ocean/20 bg-ocean/10 px-md py-sm">
             <div className="h-3 w-6 rounded-sm bg-ocean/25" />
-            <span className="text-caption font-bold">P10 - P90 Band</span>
+            <span className="text-caption font-bold text-midnight">P10 - P90 Band</span>
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-xl border border-outline-variant/20 bg-white p-xl shadow-sm">
+        <div className="relative overflow-hidden rounded-xl bg-white p-xl shadow-md shadow-primary/[0.06]">
           <div className="mb-huge flex items-center justify-between">
             <div className="flex gap-xl">
               <div className="flex flex-col">
                 <span className="text-caption font-bold uppercase tracking-widest text-on-surface-variant">
                   Target Window
                 </span>
-                <span className="text-metric-sm text-midnight">{horizon} Outlook</span>
+                <span className="text-metric-sm tabular-nums text-midnight">{horizon} Outlook</span>
               </div>
               <div className="h-10 w-px bg-outline-variant/30" />
               <div className="flex flex-col">
                 <span className="text-caption font-bold uppercase tracking-widest text-on-surface-variant">
                   Avg. Predicted Price
                 </span>
-                <span className="text-metric-sm text-midnight">{chartData.avgPredictedPrice}</span>
+                <span className="text-metric-sm tabular-nums text-midnight">{chartData.avgPredictedPrice}</span>
               </div>
             </div>
             <div className="flex gap-sm">
@@ -117,7 +117,7 @@ export function DemandForecastingPage() {
         <div className="rounded-xl border border-outline-variant/30 bg-cloud p-lg">
           <div className="mb-sm flex items-center justify-between">
             <span className="text-caption font-bold text-on-surface-variant">Stock Level</span>
-            <span className="text-h3 font-bold text-midnight">{INVENTORY_HEALTH.stockLevelPercent}%</span>
+            <span className="text-h3 tabular-nums font-bold text-midnight">{INVENTORY_HEALTH.stockLevelPercent}%</span>
           </div>
           <div className="relative h-4 w-full overflow-hidden rounded-full bg-outline-variant/20">
             <div className="h-full rounded-full bg-ocean" style={{ width: `${INVENTORY_HEALTH.stockLevelPercent}%` }} />
@@ -137,14 +137,14 @@ export function DemandForecastingPage() {
           <div className="flex items-center justify-between rounded-lg bg-surface-container p-md">
             <div className="flex items-center gap-sm">
               <span className="material-symbols-outlined text-secondary">hourglass_top</span>
-              <span className="text-body">Hari hingga habis</span>
+              <span className="text-body text-on-surface-variant">Hari hingga habis</span>
             </div>
             <span className="text-body font-bold text-midnight">{INVENTORY_HEALTH.daysUntilStockout} hari</span>
           </div>
           <div className="flex items-center justify-between rounded-lg bg-surface-container p-md">
             <div className="flex items-center gap-sm">
               <span className="material-symbols-outlined text-secondary">shopping_cart_checkout</span>
-              <span className="text-body">Optimal Order Qty</span>
+              <span className="text-body text-on-surface-variant">Optimal Order Qty</span>
             </div>
             <span className="text-body font-bold text-midnight">{INVENTORY_HEALTH.optimalOrderQtyKg}kg</span>
           </div>
@@ -204,7 +204,7 @@ function LegendItem({
   return (
     <div className="flex items-center gap-sm rounded-lg border border-outline-variant/20 bg-surface-container-high px-md py-sm">
       <span className={`h-3 w-3 ${rounded} ${colorClassName}`} />
-      <span className="text-caption font-bold">{label}</span>
+      <span className="text-caption font-bold text-midnight">{label}</span>
     </div>
   );
 }

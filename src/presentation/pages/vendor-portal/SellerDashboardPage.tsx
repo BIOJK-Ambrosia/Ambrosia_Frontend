@@ -19,7 +19,7 @@ export function SellerDashboardPage() {
       </div>
 
       <div className="grid grid-cols-1 gap-xl lg:grid-cols-2">
-        <div className="rounded-xl border border-surface-variant bg-white p-xl shadow-sm">
+        <div className="rounded-xl bg-white p-xl shadow-md shadow-primary/[0.06]">
           <div className="mb-lg flex items-center justify-between">
             <h3 className="text-h3 text-primary">Notifikasi RFQ Terbaru</h3>
             <Link className="text-caption font-bold text-ocean" to="/vendor/portal">
@@ -30,7 +30,7 @@ export function SellerDashboardPage() {
             {notifications.slice(0, 2).map((notification) => (
               <div
                 key={notification.id}
-                className="flex items-center gap-md rounded-lg border border-surface-variant/30 bg-surface-container-low p-md"
+                className="flex items-center gap-md rounded-lg bg-surface-container-low p-md"
               >
                 <span className="material-symbols-outlined text-primary">{notification.icon}</span>
                 <div className="flex-grow">
@@ -55,18 +55,21 @@ export function SellerDashboardPage() {
         </div>
 
         <div className="flex flex-col gap-xl">
-          <div className="rounded-xl border border-surface-variant bg-white p-xl shadow-sm">
+          <div className="rounded-xl bg-white p-xl shadow-md shadow-primary/[0.06]">
             <div className="mb-lg flex items-center justify-between">
               <h4 className="text-h3 text-primary">Histori Transaksi Terbaru</h4>
-              <button className="text-caption font-bold text-ocean" type="button">
+              <span
+                className="cursor-not-allowed text-caption font-bold text-on-surface-variant/40"
+                title="Halaman histori lengkap belum tersedia"
+              >
                 Lihat Semua
-              </button>
+              </span>
             </div>
             <div className="space-y-md">
               {history.slice(0, 2).map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center gap-md rounded-lg border border-surface-variant/30 bg-surface-container-low p-md"
+                  className="flex items-center gap-md rounded-lg bg-surface-container-low p-md"
                 >
                   <div className={`h-10 w-2 rounded-full ${item.statusColorClassName}`} />
                   <div className="flex-grow">
@@ -79,7 +82,7 @@ export function SellerDashboardPage() {
             </div>
           </div>
 
-          <div className="flex aspect-[2/1] flex-col justify-end overflow-hidden rounded-xl border border-surface-variant bg-gradient-to-br from-primary to-ocean p-xl shadow-sm">
+          <div className="flex aspect-[2/1] flex-col justify-end overflow-hidden rounded-xl bg-gradient-to-br from-primary to-ocean p-xl shadow-md shadow-primary/20">
             <p className="text-body font-bold text-white">Trend Pasar Kopi Arabica</p>
             <p className="text-caption text-white/70">Prediksi kenaikan 4.2% minggu depan</p>
           </div>

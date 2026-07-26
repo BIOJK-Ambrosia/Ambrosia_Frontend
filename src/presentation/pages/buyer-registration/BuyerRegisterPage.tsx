@@ -44,7 +44,7 @@ export function BuyerRegisterPage() {
   if (submitted) {
     return (
       <main className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center p-huge">
-        <div className="w-full max-w-[32rem] rounded-xl border border-outline-variant bg-white p-huge text-center shadow-2xl">
+        <div className="w-full max-w-[32rem] rounded-xl bg-white p-huge text-center shadow-2xl shadow-primary/10">
           <div className="mx-auto mb-xl flex h-20 w-20 items-center justify-center rounded-full bg-success/10">
             <span className="material-symbols-outlined text-[40px] text-success">check_circle</span>
           </div>
@@ -67,7 +67,7 @@ export function BuyerRegisterPage() {
   return (
     <main className="flex min-h-[calc(100vh-4rem)] flex-col items-center p-huge">
       <form
-        className="w-full max-w-2xl space-y-xl rounded-xl border border-outline-variant bg-white p-huge shadow-sm"
+        className="w-full max-w-2xl space-y-xl rounded-xl bg-white p-huge shadow-md shadow-primary/[0.06]"
         onSubmit={handleSubmit}
       >
         <div>
