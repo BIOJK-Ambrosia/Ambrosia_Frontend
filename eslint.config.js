@@ -60,7 +60,11 @@ export default tseslint.config(
             {
               from: { element: { type: 'infrastructure' } },
               allow: {
-                to: { element: { types: { anyOf: ['domain', 'application', 'shared'] } } },
+                to: {
+                  element: {
+                    types: { anyOf: ['domain', 'application', 'infrastructure', 'shared'] },
+                  },
+                },
               },
             },
             {
