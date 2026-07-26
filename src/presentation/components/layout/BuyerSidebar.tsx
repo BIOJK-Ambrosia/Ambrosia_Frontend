@@ -40,8 +40,10 @@ function SidebarLink({ item }: { item: NavItem }) {
     <NavLink
       to={item.path}
       className={({ isActive }) =>
-        `mx-2 my-1 flex items-center gap-md rounded-lg px-4 py-2 transition-colors ${
-          isActive ? 'bg-secondary font-semibold text-on-secondary' : 'text-on-primary/70 hover:bg-white/10 hover:text-on-primary'
+        `mx-2 my-1 flex items-center gap-md rounded-lg border-l-2 px-4 py-2 transition-colors duration-200 ${
+          isActive
+            ? 'border-secondary bg-white/10 font-semibold text-on-primary'
+            : 'border-transparent text-on-primary/70 hover:bg-white/5 hover:text-on-primary'
         }`
       }
     >

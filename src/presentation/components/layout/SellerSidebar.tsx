@@ -33,8 +33,8 @@ function SidebarLink({ item }: { item: NavItem }) {
     <NavLink
       to={item.path}
       className={({ isActive }) =>
-        `mx-2 my-1 flex items-center gap-md rounded-lg px-4 py-3 transition-all ${
-          isActive ? 'bg-white/30 font-bold text-primary' : 'text-primary/70 hover:bg-white/20 hover:text-primary'
+        `mx-2 my-1 flex items-center gap-md rounded-lg border-l-2 px-4 py-3 transition-all duration-200 ${
+          isActive ? 'border-primary bg-white/30 font-bold text-primary' : 'border-transparent text-primary/70 hover:bg-white/20 hover:text-primary'
         }`
       }
     >

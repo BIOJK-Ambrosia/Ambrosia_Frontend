@@ -90,21 +90,21 @@ export function RfqManagementPage() {
           onSubmit={handleCreateSubmit}
         >
           <input
-            className="rounded-lg border border-outline-variant px-3 py-2 text-body text-on-surface"
+            className="rounded-lg border border-outline-variant px-3 py-2 text-body text-on-surface outline-none transition-colors duration-200 hover:border-outline focus:border-primary focus:ring-2 focus:ring-primary/30"
             placeholder="Judul RFQ"
             value={newTitle}
             onChange={(event) => setNewTitle(event.target.value)}
             required
           />
           <input
-            className="rounded-lg border border-outline-variant px-3 py-2 text-body text-on-surface"
+            className="rounded-lg border border-outline-variant px-3 py-2 text-body text-on-surface outline-none transition-colors duration-200 hover:border-outline focus:border-primary focus:ring-2 focus:ring-primary/30"
             placeholder="Kategori"
             value={newCategory}
             onChange={(event) => setNewCategory(event.target.value)}
             required
           />
           <input
-            className="rounded-lg border border-outline-variant px-3 py-2 text-body text-on-surface"
+            className="rounded-lg border border-outline-variant px-3 py-2 text-body text-on-surface outline-none transition-colors duration-200 hover:border-outline focus:border-primary focus:ring-2 focus:ring-primary/30"
             placeholder="Nama Vendor"
             value={newVendorName}
             onChange={(event) => setNewVendorName(event.target.value)}
@@ -260,7 +260,7 @@ function FilterSelect({
       </label>
       <select
         id={id}
-        className="min-w-[160px] rounded-lg border border-outline-variant px-4 py-2 text-body text-on-surface focus:ring-primary"
+        className="min-w-[160px] rounded-lg border border-outline-variant px-4 py-2 text-body text-on-surface outline-none transition-colors duration-200 hover:border-outline focus:border-primary focus:ring-2 focus:ring-primary/30"
         value={value}
         onChange={(event) => onChange?.(event.target.value)}
       >

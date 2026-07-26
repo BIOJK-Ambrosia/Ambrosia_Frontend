@@ -5,22 +5,22 @@ const VERDICT_STYLES: Record<RecommendationVerdict, { label: string; badgeClassN
   accept: {
     label: 'Accept',
     badgeClassName: 'bg-success text-white',
-    boxClassName: 'bg-success/10 border border-success/30',
+    boxClassName: 'bg-success/10',
   },
   negotiate: {
     label: 'Negotiate',
     badgeClassName: 'bg-warning text-white',
-    boxClassName: 'bg-warning/10 border border-warning/30',
+    boxClassName: 'bg-warning/10',
   },
   reject: {
     label: 'Reject',
     badgeClassName: 'bg-danger text-white',
-    boxClassName: 'bg-danger/10 border border-danger/30',
+    boxClassName: 'bg-danger/10',
   },
   pending: {
     label: 'Pending',
     badgeClassName: 'bg-surface-container-high text-on-surface-variant',
-    boxClassName: 'bg-surface-container-high border border-outline-variant/30',
+    boxClassName: 'bg-surface-container-high',
   },
 };
 
@@ -55,12 +55,12 @@ export function RecommendationCard({
   }
 
   return (
-    <div className="rounded-lg bg-secondary-container p-xl">
+    <div className="rounded-xl bg-secondary-container p-xl shadow-md shadow-primary/[0.06]">
       <div className="mb-md flex items-center gap-md">
         <span className="material-symbols-outlined text-on-secondary-container">psychology</span>
         <h4 className="text-h3 text-on-secondary-container">{title}</h4>
       </div>
-      <div className="rounded-lg border border-on-secondary-container/20 bg-white/50 p-md">
+      <div className="rounded-lg border border-white/40 bg-white/50 p-md backdrop-blur-sm">
         <p className="text-body leading-relaxed text-on-secondary-container">{narrative}</p>
         {actions && <div className="mt-md flex gap-sm">{actions}</div>}
       </div>
