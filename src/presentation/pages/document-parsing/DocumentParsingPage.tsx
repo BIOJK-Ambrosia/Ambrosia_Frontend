@@ -96,9 +96,9 @@ export function DocumentParsingPage() {
                 {activeFields.map((field) => (
                   <div
                     key={`${activeDocId}-${field.id}`}
-                    className={`rounded-xl bg-white p-lg shadow-sm ${
+                    className={`rounded-xl bg-white p-lg shadow-md shadow-primary/[0.06] ${
                       field.fullWidth ? 'col-span-2' : ''
-                    } ${field.confidence === 'low' ? 'border-2 border-danger' : 'border border-outline-variant/30'}`}
+                    } ${field.confidence === 'low' ? 'border-2 border-danger' : ''}`}
                   >
                     <div className="mb-2 flex items-center justify-between">
                       <label className="text-label-medium text-on-surface-variant">{field.label}</label>
@@ -121,7 +121,7 @@ export function DocumentParsingPage() {
                 ))}
               </div>
 
-              <div className="relative overflow-hidden rounded-2xl border border-primary-container/20 bg-powder p-xl">
+              <div className="relative overflow-hidden rounded-2xl bg-powder p-xl shadow-md shadow-primary/[0.06]">
                 <div className="relative z-10">
                   <div className="mb-lg flex items-center gap-3">
                     <div className="rounded-lg bg-primary p-2">

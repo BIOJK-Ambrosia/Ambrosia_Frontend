@@ -32,7 +32,7 @@ export function LoginPage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-surface-container-low p-huge">
       <form
-        className="w-full max-w-[28rem] space-y-xl rounded-xl border border-outline-variant bg-white p-huge shadow-sm"
+        className="w-full max-w-[28rem] space-y-xl rounded-xl bg-white p-huge shadow-lg shadow-primary/10"
         onSubmit={handleSubmit}
       >
         <div className="text-center">

@@ -129,7 +129,7 @@ export function RfqManagementPage() {
         {filteredCards.map((card) => (
           <div
             key={card.id}
-            className="rounded-xl border border-surface-variant bg-surface-container-lowest p-lg shadow-sm transition-shadow hover:shadow-md"
+            className="rounded-xl bg-surface-container-lowest p-lg shadow-md shadow-primary/[0.06] transition-shadow hover:shadow-lg hover:shadow-primary/[0.1]"
           >
             <div className="mb-lg flex items-start justify-between">
               <div>
@@ -161,7 +161,9 @@ export function RfqManagementPage() {
             >
               <div className="mb-sm flex items-center justify-between">
                 <span className="text-label-medium text-on-surface-variant">Price vs. P50 Prediction</span>
-                <span className={`text-label-medium font-bold ${card.comparison ? card.comparison.deltaClassName : ''}`}>
+                <span
+                  className={`text-label-medium tabular-nums font-bold ${card.comparison ? card.comparison.deltaClassName : ''}`}
+                >
                   {card.comparison ? card.comparison.deltaLabel : 'Awaiting Vendor Data'}
                 </span>
               </div>
@@ -179,7 +181,7 @@ export function RfqManagementPage() {
                     />
                   </div>
                   <div className="min-w-[80px] text-right">
-                    <p className={`text-body font-bold ${card.comparison.vendorBidClassName}`}>
+                    <p className={`text-body tabular-nums font-bold ${card.comparison.vendorBidClassName}`}>
                       {card.comparison.vendorBidLabel}
                     </p>
                     <p className="text-caption text-on-surface-variant">Vendor Bid</p>
@@ -226,7 +228,7 @@ export function RfqManagementPage() {
         )}
       </div>
 
-      <section className="mt-huge flex items-start gap-lg rounded-xl border-2 border-primary bg-powder p-xl">
+      <section className="mt-huge flex items-start gap-lg rounded-xl border border-primary/20 bg-powder p-xl shadow-md shadow-primary/[0.06]">
         <span className="material-symbols-outlined text-[32px] text-primary">info</span>
         <div>
           <h4 className="mb-xs text-h3 font-bold text-primary">Model Methodology & Prediction Integrity</h4>

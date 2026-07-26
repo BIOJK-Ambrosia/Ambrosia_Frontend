@@ -44,7 +44,7 @@ export function BuyerDashboardPage() {
       </div>
 
       <div className="grid grid-cols-1 gap-xl lg:grid-cols-3">
-        <div className="rounded-lg border border-outline-variant/30 bg-surface-container-lowest p-xl lg:col-span-2">
+        <div className="rounded-xl bg-surface-container-lowest p-xl shadow-md shadow-primary/[0.06] lg:col-span-2">
           <div className="mb-huge flex items-center justify-between">
             <div>
               <h3 className="text-h3 text-primary">Tren Harga: Cabai Rawit Merah</h3>
@@ -70,7 +70,7 @@ export function BuyerDashboardPage() {
           </div>
         </div>
 
-        <div className="flex h-full flex-col rounded-lg border border-outline-variant/30 bg-surface-container-lowest p-xl lg:col-span-1">
+        <div className="flex h-full flex-col rounded-xl bg-surface-container-lowest p-xl shadow-md shadow-primary/[0.06] lg:col-span-1">
           <h3 className="mb-xl text-h3 text-primary">Alert Terbaru</h3>
           <div className="flex-1 space-y-md">
             {alerts.map((alert) => (
@@ -139,21 +139,21 @@ export function BuyerDashboardPage() {
           />
         )}
 
-        <div className="flex items-center gap-xl rounded-lg border border-outline-variant/30 bg-surface-container-lowest p-xl">
+        <div className="flex items-center gap-xl rounded-xl bg-surface-container-lowest p-xl shadow-md shadow-primary/[0.06]">
           <div className="flex-1">
             <h4 className="mb-xs text-h3 text-primary">Status Vendor Scorecard</h4>
             <p className="mb-md text-caption text-on-surface-variant">Kualitas pengiriman rata-rata minggu ini</p>
             <div className="space-y-sm">
               <div className="flex justify-between text-[11px] font-medium">
                 <span>Ketepatan Waktu</span>
-                <span>{VENDOR_SCORECARD.onTimeDelivery}%</span>
+                <span className="tabular-nums">{VENDOR_SCORECARD.onTimeDelivery}%</span>
               </div>
               <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-container">
                 <div className="h-full bg-success" style={{ width: `${VENDOR_SCORECARD.onTimeDelivery}%` }} />
               </div>
               <div className="flex justify-between pt-1 text-[11px] font-medium">
                 <span>Kualitas Produk</span>
-                <span>{VENDOR_SCORECARD.productQuality}%</span>
+                <span className="tabular-nums">{VENDOR_SCORECARD.productQuality}%</span>
               </div>
               <div className="h-1.5 w-full overflow-hidden rounded-full bg-surface-container">
                 <div className="h-full bg-warning" style={{ width: `${VENDOR_SCORECARD.productQuality}%` }} />
